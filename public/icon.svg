@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <rect width="256" height="256" rx="56" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="4"/>
+  <g transform="translate(12, 8) scale(1.84)">
+    <!-- Process Bubbles -->
+    <circle cx="38" cy="18" r="4.5" fill="#E00500" />
+    <circle cx="28" cy="28" r="3.5" fill="#172554" />
+    <circle cx="42" cy="34" r="2.5" fill="#E00500" />
+    <circle cx="34" cy="42" r="5" fill="#172554" />
+
+    <!-- Industrial Gear Outline (Red Top, Navy Bottom) -->
+    <path
+      d="M65 24L75 24L78 33L88 36L96 30L103 37L98 46L102 56L111 58L111 68L102 71L99 81L106 89L99 96L90 91L80 95L77 104L67 104L64 95L54 91L45 97L38 90L44 81L40 71L31 68L31 58L40 55L43 45L36 38L43 31L52 36L62 33L65 24Z"
+      fill="#E00500"
+    />
+    <path
+      d="M31 68L40 71L44 81L38 90L45 97L54 91L64 95L67 104L77 104L80 95L90 91L99 96L106 89L99 81L102 71L111 68L111 75L102 78L98 87L104 94L97 101L88 96L79 100L76 109L66 109L63 100L53 96L44 102L37 95L43 87L39 78L31 75L31 68Z"
+      fill="#172554"
+    />
+
+    <!-- Inner White Housing Ring -->
+    <circle cx="71" cy="64" r="34" fill="#FFFFFF" />
+
+    <!-- Navy Circular Track -->
+    <path
+      d="M71 36C86.464 36 99 48.536 99 64C99 79.464 86.464 92 71 92C55.536 92 43 79.464 43 64C43 48.536 55.536 36 71 36Z"
+      stroke="#172554"
+      stroke-width="4.5"
+      stroke-dasharray="180 30"
+      fill="none"
+    />
+
+    <!-- Three Performance Bar Chart Columns -->
+    <rect x="53" y="70" width="6.5" height="12" rx="1" fill="#172554" />
+    <rect x="63" y="58" width="6.5" height="24" rx="1" fill="#172554" />
+    <rect x="73" y="47" width="6.5" height="35" rx="1" fill="#E00500" />
+
+    <!-- Upward Surging Growth Swoosh & Arrow (Red) -->
+    <path
+      d="M40 78C56 74 72 68 89 54L105 39"
+      stroke="#E00500"
+      stroke-width="5"
+      stroke-linecap="round"
+    />
+    <path
+      d="M106 38L96 39L103 48L106 38Z"
+      fill="#E00500"
+    />
+  </g>
+</svg>

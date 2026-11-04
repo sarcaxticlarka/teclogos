@@ -1,0 +1,321 @@
+Skip to content
+Teclogos
+Home
+About Us
+Solutions & Services
+Careers
+CSR
+Contact Us
+
+
+WHO WE ARE
+TecLogos is a domestic leader in the professional
+services of automation products covering Industrial & Residential market.
+
+Read More
+
+
+“
+The human foot is a masterpiece of
+engineering and a work of art.
+Leonardo da Vinci
+
+WHAT WE DO
+TecLogos is committed to understanding our
+customers’ unique business drivers and providing unbiased, technical solutions that improve their competitive position, manage corporate risk
+
+Read More
+
+
+Why Work with us
+Our key value proposition is reliability, proximity and technical expertise for all your Industrial,. Commercial and Residential Automation needs.
+
+Read More
+
+Quick links
+Home
+About Us
+Careers
+CSR
+Contact Us
+Solutions & Services
+Turnkey Automation Solutions
+Industrial Automation
+Building Automation
+Contact
+TecLogos Automation Pvt. Ltd.
+Near Serum Institute, behind Annasaheb Magar College,
+Tukaram Tupe Nagar, Hadapsar, Pune, Maharashtra 411028
+Email: Admin@teclogos.in,
+Hr@teclogos.in
+
++91 8261007671
+
+© 2019 TecLogos Automation Pvt Ltd. All Rights Reserved. | Website Development & Website Design By Interactive Solutions
+
+
+Skip to content
+Teclogos
+Home
+About Us
+Solutions & Services
+Careers
+CSR
+Contact Us
+
+About Us
+TecLogos is dedicated to providing a quality project work in a schedule-conscious, safe and cost-effective way.
+
+TecLogos Automation Pvt Ltd is a professional engineering and integration firm that specializes in the design and implementation of high-value industrial automation solutions. TecLogos supports Automation OEM’s in domestic in all major verticals such as Power Plant, Oil & Gas, Petrochemical, Refineries, Water treatment,Cement, Steel, Paper, Metal etc.
+We offer our customers a single source of vendor-independent expertise in all technologies that encompass industrial automation – from instrumentation and electrical engineering (I&E), to the design and integration of control and data gathering systems, through development of critical information and data management systems. In addition, TecLogos provides complete communication and network design services to enable the flow of data from measurement and control devices through the automation infrastructure into operations centers and corporate databases.
+
+Principles
+To be a Successful Enduring Business
+To Focus on Design, Engineering and special services
+To be a Good Place to Work
+To Reward Effort
+To be Owned and Managed by the Employees
+
+Quick links
+Home
+About Us
+Careers
+CSR
+Contact Us
+Solutions & Services
+Turnkey Automation Solutions
+Industrial Automation
+Building Automation
+Contact
+TecLogos Automation Pvt. Ltd.
+Near Serum Institute, behind Annasaheb Magar College,
+Tukaram Tupe Nagar, Hadapsar, Pune, Maharashtra 411028
+Email: Admin@teclogos.in,
+Hr@teclogos.in
+
++91 8261007671
+
+© 2019 TecLogos Automation Pvt Ltd. All Rights Reserved. | Website Development & Website Design By Interactive Solutions
+
+Skip to content
+Teclogos
+Home
+About Us
+Solutions & Services
+Careers
+CSR
+Contact Us
+
+Industrial Automation
+
+We can provide total End to End Integrated system instrumentation design from device to the control and data acquisition system. We work as solution consultants as well for all plant control systems installed base to achieve desired productive efficiency. We offer manufacturing of custom designed control panels. We also assist customers in field testing, servicing and the marketing of new systems.
+We offer
+
+Honeywell : TPS system, Experion Process Knowledge system (EPKS), Plantscape SCADA system, HPM/APM/PM controller, C200 and C300 Controller, LCS 620-35 PLC, Master Logic ML2xx PLC, and Fail Safe Controller (FSC/SM)
+Siemens : SIMATIC S7 controller Systems
+ABB : System 800xA – AC 800M; Freelance – AC 900F and AC 800F
+Allen-Bradly : SLCs PLCs
+GE-Fanuc : PLC Series 90-30 system.
+Hardware Design and Engineering for Control Systems
+Hardware design documents or manuals for proposed control systems
+Detailed Hardware Engineering Manual for system assembly and integration
+Hardware Bill of Material for proposed control system ordering on respective OEMs
+Control Systems Hardware Functional testing
+Hardware Factory Acceptance Tests, Power-On, Commissioning and Site Acceptance Tests
+Software Application Design and Engineering for Control Systems
+Software functional design documents or manuals for proposed control systems
+Software detailed application engineering document
+Software Bill of Material for proposed control system ordering on respective OEMs
+Control application developments and integrating functional testing from Graphics display pages
+Thirty Party application development and testing in process plants require environments
+Control application database migrations engineering/reverse-engineering to the latest system release
+Graphics displays migrations to the latest system platform release
+Software or control applications Factory Acceptance Tests, Commissioning with field devices  and Site Acceptance Tests
+Special Services for Control Systems
+Technical experts practical consultancy or solutions on proposed control systems for green-field project, migration projects and Add-on projects
+Control Systems Quote/estimation
+System Performance Base lining for better system efficiency on installed based control system along with OEM
+Integrated Control Systems Automation Assessments Audits for better system efficiency on installed based control system along with OEM
+Control Systems Solutions Architect
+Control System Migration readiness checks
+Strong practical consultancy on OEM control system migrations automation proposals
+On Field/Site Services for Control Systems
+Annual preventive maintenance
+Plant Shutdown and Start-up
+Control System on site commissioning, SAT
+Control Panel power-on test
+
+Quick links
+Home
+About Us
+Careers
+CSR
+Contact Us
+Solutions & Services
+Turnkey Automation Solutions
+Industrial Automation
+Building Automation
+Contact
+TecLogos Automation Pvt. Ltd.
+Near Serum Institute, behind Annasaheb Magar College,
+Tukaram Tupe Nagar, Hadapsar, Pune, Maharashtra 411028
+Email: Admin@teclogos.in,
+Hr@teclogos.in
+
++91 8261007671
+
+© 2019 TecLogos Automation Pvt Ltd. All Rights Reserved. | Website Development & Website Design By Interactive Solutions
+
+Skip to content
+Teclogos
+Home
+About Us
+Solutions & Services
+Careers
+CSR
+Contact Us
+
+Building Automation Solutions and Services
+Integrated Buildings Management Systems Includes:
+
+
+We can provide total End to End Integrated Building control management system (BMS) and instrumentation design from equipment or device to the control system or data acquisition system. We work as solution consultants as well for all Building Management control systems installed base to achieve desired productive efficiency. We also assist customers in field testing, servicing and the marketing of new systems.
+
+We offer expertise on…
+
+Honeywell DDC Spyder Controller
+Niagara WEBStation-AX, NiagaraN4
+Johnson Controls NAE Supervisor, FEC (Field Equipment Controller) DDC Controller)
+Alerton Compass, DDC Bar
+Indusfot SCADA System
+Mitsubishi FX series, A Series and Q Series PLCs
+Distech Controllers
+Simatic S7-1200 PLCs and KTP displays, TIA Portal Step-7
+Hardware Design and Engineering for Building Management Systems
+Hardware design documents or manuals for proposed control systems
+Detailed Hardware Engineering Manual for system assembly and integration
+Hardware Bill of Material for proposed control system ordering on respective OEMs
+Control Systems Hardware Functional testing
+Hardware Factory Acceptance Tests, Power-On, Commissioning and Site Acceptance Tests
+Software Application Design and Engineering for Building Management Systems
+Software functional design documents or manuals for proposed control systems
+Software detailed application engineering document
+Software Bill of Material for proposed control system ordering on respective OEMs
+Control application developments and integrating functional testing from Graphics display pages 
+Thirty Party application development and testing in buildings require environments
+Control application database migrations engineering/reverse-engineering to the latest system release
+Graphics displays migrations to the latest system platform release
+Software or control applications Factory Acceptance Tests, Commissioning with field devices  and Site Acceptance Tests
+On Field/Site Services for BMS Systems
+Annual preventive maintenance
+Building Management systems troubleshooting
+Site commissioning, Site Accepting Test
+Systems Migrations Engineering
+Niagara WEB Station-AX old versions to the NiagaraN4 up gradation
+Johnson Controls to Niagara
+Any old systems to Niagara
+Pneumatic old system to the Electronics new system with latest platforms such as NiagaraN4
+
+Quick links
+Home
+About Us
+Careers
+CSR
+Contact Us
+Solutions & Services
+Turnkey Automation Solutions
+Industrial Automation
+Building Automation
+Contact
+TecLogos Automation Pvt. Ltd.
+Near Serum Institute, behind Annasaheb Magar College,
+Tukaram Tupe Nagar, Hadapsar, Pune, Maharashtra 411028
+Email: Admin@teclogos.in,
+Hr@teclogos.in
+
++91 8261007671
+
+© 2019 TecLogos Automation Pvt Ltd. All Rights Reserved. | Website Development & Website Design By Interactive Solutions
+
+Skip to content
+Teclogos
+Home
+About Us
+Solutions & Services
+Careers
+CSR
+Contact Us
+
+Careers
+
+A culture of continuous improvement and success.
+TecLogos is continuously searching for “Top Talent”, from fresher’s to knowledgeable professionals. Our employees are our strengths. We take great pleasure welcoming a new member to the family, and strive to create an excellent workplace that elicits the very best from our employees.
+For career opportunities with TecLogos, please forward your CV to: HR@TecLogos.in
+
+Our staffing consists of:
+Professional Engineers who has industrial automation (DCS/SCADA/PLC) 3-5 years experience
+Engineering Interns of Instrumentation and Control systems disciple
+Process plant Graphics Designers
+AutoCAD Drafters
+We offer equal employment opportunities to all individuals.
+
+We will be glad to assist you:
++91 7070777058
+hr@teclogos.in
+
+Quick links
+Home
+About Us
+Careers
+CSR
+Contact Us
+Solutions & Services
+Turnkey Automation Solutions
+Industrial Automation
+Building Automation
+Contact
+TecLogos Automation Pvt. Ltd.
+Near Serum Institute, behind Annasaheb Magar College,
+Tukaram Tupe Nagar, Hadapsar, Pune, Maharashtra 411028
+Email: Admin@teclogos.in,
+Hr@teclogos.in
+
++91 8261007671
+
+© 2019 TecLogos Automation Pvt Ltd. All Rights Reserved. | Website Development & Website Design By Interactive Solutions
+Skip to content
+Teclogos
+Home
+About Us
+Solutions & Services
+Careers
+CSR
+Contact Us
+
+CSR
+
+We believe that it is the responsibility of each –and-every human kind to repay the debts of society.
+This encourages us sparing and returning few shares of our professional achievements and benefits back to the society as a form of thanks note.
+So we decided that at the end of every year we are going to donate expenses of primary education of economical backward family kids.
+
+
+Quick links
+Home
+About Us
+Careers
+CSR
+Contact Us
+Solutions & Services
+Turnkey Automation Solutions
+Industrial Automation
+Building Automation
+Contact
+TecLogos Automation Pvt. Ltd.
+Near Serum Institute, behind Annasaheb Magar College,
+Tukaram Tupe Nagar, Hadapsar, Pune, Maharashtra 411028
+Email: Admin@teclogos.in,
+Hr@teclogos.in
+
++91 8261007671
+
+© 2019 TecLogos Automation Pvt Ltd. All Rights Reserved. | Website Development & Website Design By Interactive Solutions
