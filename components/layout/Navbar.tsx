@@ -92,7 +92,7 @@ const NAV_STRUCTURE: NavSection[] = [
       desc: "Every control panel leaves our Pune workshop pre-wired, simulated with virtual I/O, and thoroughly validated before site delivery — slashing on-site commissioning time by up to 40%.",
       href: "/services",
       linkText: "Explore Engineering Capabilities",
-      imageUrl: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=700&q=80",
+      imageUrl: "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=700&q=80",
     },
   },
   {
@@ -212,7 +212,7 @@ const NAV_STRUCTURE: NavSection[] = [
       desc: "Unlike single-brand vendors that push proprietary hardware, TecLogos selects and integrates the exact controller platform that maximizes your plant's performance and ROI.",
       href: "/technologies",
       linkText: "Explore Technology Stack",
-      imageUrl: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80",
+      imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=700&q=80",
     },
   },
   {

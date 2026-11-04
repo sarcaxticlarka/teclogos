@@ -129,7 +129,7 @@ export const INDUSTRIES_DATA: IndustrySector[] = [
       { label: "Telemetry Uptime", value: "99.95%" },
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1541888946425-d0fbb18615f8?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?auto=format&fit=crop&w=1200&q=80",
   },
   {
     id: "cement-minerals",
@@ -205,7 +205,7 @@ export const INDUSTRIES_DATA: IndustrySector[] = [
       { label: "Mill Cobble Incidents", value: "-60%" },
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1200&q=80",
   },
   {
     id: "chemicals-process",

@@ -11,6 +11,25 @@ export function CapabilitiesSection() {
   const selectedService =
     SERVICES_DATA.find((s) => s.id === activeTab) || SERVICES_DATA[0];
 
+  const getServiceImage = (id: string) => {
+    switch (id) {
+      case "industrial-automation":
+        return "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=800&q=80"; // DCS Control Room Station
+      case "ei-engineering":
+        return "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"; // CAD schematics & engineering design
+      case "control-panels":
+        return "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80"; // Control panel fabrication & wiring
+      case "building-automation":
+        return "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"; // Commercial BMS skyscraper
+      case "migration-modernization":
+        return "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80"; // Refinery plant retrofit & hot cutover
+      case "lifecycle-support":
+        return "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=800&q=80"; // Site engineer in safety gear
+      default:
+        return "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80";
+    }
+  };
+
   return (
     <section className="py-24 px-4 sm:px-6 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto space-y-12">
@@ -103,8 +122,23 @@ export function CapabilitiesSection() {
               </div>
             </div>
 
-            {/* Right 5 Columns: Standards, Platforms & Metrics */}
-            <div className="lg:col-span-5 space-y-6 bg-white border border-slate-200 p-8 shadow-xs">
+            {/* Right 5 Columns: Visual Asset, Standards, Platforms & Metrics */}
+            <div className="lg:col-span-5 space-y-6 bg-white border border-slate-200 p-6 sm:p-8 shadow-xs">
+              {/* Authentic Visual Snapshot */}
+              <div className="relative aspect-[16/9] w-full overflow-hidden border border-slate-200/80 bg-slate-100">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={getServiceImage(selectedService.id)}
+                  alt={selectedService.title}
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                />
+                <div className="absolute top-2.5 left-2.5">
+                  <span className="inline-block px-2.5 py-0.5 bg-red-600 text-white text-[9.5px] font-bold uppercase tracking-wider shadow-xs">
+                    {selectedService.badge}
+                  </span>
+                </div>
+              </div>
+
               {/* Measurable Value */}
               <div className="space-y-3">
                 <h4 className="text-xs font-mono uppercase tracking-wider text-slate-900 font-bold flex items-center gap-2">

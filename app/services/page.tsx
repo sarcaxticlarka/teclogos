@@ -26,7 +26,7 @@ export default function ServicesPage() {
           <div
             className="absolute inset-0 bg-cover bg-center opacity-25"
             style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=2000&q=80')`,
+              backgroundImage: `url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2000&q=80')`,
             }}
           />
           <div className="max-w-7xl mx-auto space-y-6 relative z-10">

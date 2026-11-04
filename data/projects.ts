@@ -109,7 +109,7 @@ export const PROJECTS_DATA: CaseStudy[] = [
     ],
     architectureBadge: "SBR Sequencing & Municipal SCADA",
     imageUrl:
-      "https://images.unsplash.com/photo-1541888946425-d0fbb18615f8?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?auto=format&fit=crop&w=1200&q=80",
   },
   {
     id: "smart-campus-niagara-bms",

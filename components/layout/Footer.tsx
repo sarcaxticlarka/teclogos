@@ -51,9 +51,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800 text-xs">
           {/* Column 1: Corporate Profile & Origins (2 Cols on lg) */}
           <div className="lg:col-span-2 space-y-4">
-            {/* Official TecLogos Corporate Logo - Seamless Vector Presentation */}
-            <Link href="/" className="inline-block transition-transform hover:scale-[1.02]">
-              <TecLogosLogo className="h-10 sm:h-11" variant="dark" />
+            {/* Official TecLogos Corporate Logo - Crisp White Corporate Plaque */}
+            <Link
+              href="/"
+              className="inline-flex items-center bg-white px-4 py-2.5 sm:px-5 sm:py-3 transition-transform hover:scale-[1.02] shadow-sm"
+            >
+              <TecLogosLogo className="h-10 sm:h-11" variant="light" />
             </Link>
 
             <p className="text-xs text-slate-400 leading-relaxed pr-6">
