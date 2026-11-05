@@ -1,16 +1,71 @@
 "use client";
 
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import Link from "next/link";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Icons } from "@/components/ui/Icons";
 import { INSIGHTS_DATA } from "@/data/insights";
 
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
+
 export function InsightsPreview() {
+  const containerRef = useRef<HTMLElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const gridRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const ctx = gsap.context(() => {
+      if (headerRef.current) {
+        gsap.fromTo(
+          headerRef.current,
+          { opacity: 0, y: 25 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: headerRef.current,
+              start: "top 85%",
+              once: true,
+            },
+          }
+        );
+      }
+
+      if (gridRef.current) {
+        gsap.fromTo(
+          gridRef.current.children,
+          { opacity: 0, y: 35 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.7,
+            stagger: 0.12,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: gridRef.current,
+              start: "top 85%",
+              once: true,
+            },
+          }
+        );
+      }
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="py-24 px-4 sm:px-6 bg-slate-50 border-b border-slate-200">
+    <section ref={containerRef} className="py-24 px-4 sm:px-6 bg-slate-50 border-b border-slate-200">
       <div className="max-w-7xl mx-auto space-y-12">
         {/* Section Header: ABB Editorial Format */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div ref={headerRef} className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-4 max-w-3xl">
             <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-widest text-red-600">
               <span className="w-8 h-[2px] bg-red-600 inline-block" />
@@ -34,7 +89,7 @@ export function InsightsPreview() {
         </div>
 
         {/* 3 Core Articles Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {INSIGHTS_DATA.slice(0, 3).map((article) => (
             <div
               key={article.id}

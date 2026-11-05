@@ -1,7 +1,13 @@
 "use client";
 
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Icons } from "@/components/ui/Icons";
+
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 const WORKFLOW_STEPS = [
   {
@@ -55,11 +61,62 @@ const WORKFLOW_STEPS = [
 ];
 
 export function EngineeringWorkflow() {
+  const containerRef = useRef<HTMLElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const stepsGridRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const ctx = gsap.context(() => {
+      // Header reveal
+      if (headerRef.current) {
+        gsap.fromTo(
+          headerRef.current,
+          { opacity: 0, y: 25 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: headerRef.current,
+              start: "top 85%",
+              once: true,
+            },
+          }
+        );
+      }
+
+      // 6-stage cards stagger reveal
+      if (stepsGridRef.current) {
+        gsap.fromTo(
+          stepsGridRef.current.children,
+          { opacity: 0, y: 35 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.7,
+            stagger: 0.1,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: stepsGridRef.current,
+              start: "top 85%",
+              once: true,
+            },
+          }
+        );
+      }
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="py-24 px-4 sm:px-6 bg-slate-50 border-b border-slate-200">
+    <section ref={containerRef} className="py-24 px-4 sm:px-6 bg-slate-50 border-b border-slate-200">
       <div className="max-w-7xl mx-auto space-y-16">
         {/* Section Header */}
-        <div className="space-y-4 max-w-3xl">
+        <div ref={headerRef} className="space-y-4 max-w-3xl">
           <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-widest text-red-600">
             <span className="w-8 h-[2px] bg-red-600 inline-block" />
             <span>Turnkey Project Execution</span>
@@ -73,7 +130,7 @@ export function EngineeringWorkflow() {
         </div>
 
         {/* 6-Step Workflow Grid - Clean White Architectural Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div ref={stepsGridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {WORKFLOW_STEPS.map((w) => (
             <div
               key={w.step}

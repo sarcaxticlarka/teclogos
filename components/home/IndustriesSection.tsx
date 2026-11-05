@@ -1,21 +1,95 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Icons } from "@/components/ui/Icons";
 import { INDUSTRIES_DATA } from "@/data/industries";
 
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
+
 export function IndustriesSection() {
   const [selectedSector, setSelectedSector] = useState(INDUSTRIES_DATA[0].id);
+
+  const containerRef = useRef<HTMLElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const tabsRef = useRef<HTMLDivElement>(null);
+  const showcaseRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const ctx = gsap.context(() => {
+      if (headerRef.current) {
+        gsap.fromTo(
+          headerRef.current,
+          { opacity: 0, y: 25 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: headerRef.current,
+              start: "top 85%",
+              once: true,
+            },
+          }
+        );
+      }
+
+      if (tabsRef.current) {
+        gsap.fromTo(
+          tabsRef.current.children,
+          { opacity: 0, y: 20 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            stagger: 0.08,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: tabsRef.current,
+              start: "top 85%",
+              once: true,
+            },
+          }
+        );
+      }
+
+      if (showcaseRef.current) {
+        gsap.fromTo(
+          showcaseRef.current,
+          { opacity: 0, y: 30 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: showcaseRef.current,
+              start: "top 85%",
+              once: true,
+            },
+          }
+        );
+      }
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
 
   const activeSector =
     INDUSTRIES_DATA.find((i) => i.id === selectedSector) || INDUSTRIES_DATA[0];
 
   return (
-    <section className="py-24 px-4 sm:px-6 bg-slate-50 border-b border-slate-200">
+    <section ref={containerRef} className="py-24 px-4 sm:px-6 bg-slate-50 border-b border-slate-200">
       <div className="max-w-7xl mx-auto space-y-12">
         {/* Section Heading: ABB Style */}
-        <div className="space-y-4 max-w-3xl">
+        <div ref={headerRef} className="space-y-4 max-w-3xl">
           <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-widest text-red-600">
             <span className="w-8 h-[2px] bg-red-600 inline-block" />
             <span>Mission-Critical Verticals</span>
@@ -29,7 +103,7 @@ export function IndustriesSection() {
         </div>
 
         {/* Sector Navigation Tabs */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2">
+        <div ref={tabsRef} className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2">
           {INDUSTRIES_DATA.map((ind) => {
             const isSelected = selectedSector === ind.id;
             return (
@@ -56,7 +130,7 @@ export function IndustriesSection() {
         </div>
 
         {/* Active Sector Showcase Container - Clean White Editorial Block */}
-        <div className="bg-white border border-slate-200 shadow-sm">
+        <div ref={showcaseRef} className="bg-white border border-slate-200 shadow-sm">
           <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
             {/* Left 5 Columns: Real High-Res Photography */}
             <div

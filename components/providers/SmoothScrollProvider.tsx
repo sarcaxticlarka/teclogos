@@ -2,10 +2,43 @@
 
 import React, { useEffect } from "react";
 import { ReactLenis, useLenis } from "lenis/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "lenis/dist/lenis.css";
 
 interface SmoothScrollProviderProps {
   children: React.ReactNode;
+}
+
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
+
+function GsapLenisSync() {
+  const lenis = useLenis();
+
+  useEffect(() => {
+    if (!lenis) return;
+
+    // Connect Lenis scroll updates to GSAP ScrollTrigger
+    const handleScroll = () => {
+      ScrollTrigger.update();
+    };
+
+    lenis.on("scroll", handleScroll);
+
+    // Initial refresh once DOM is fully rendered
+    const timer = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 200);
+
+    return () => {
+      lenis.off("scroll", handleScroll);
+      clearTimeout(timer);
+    };
+  }, [lenis]);
+
+  return null;
 }
 
 function AnchorScrollHandler() {
@@ -59,6 +92,7 @@ export function SmoothScrollProvider({ children }: SmoothScrollProviderProps) {
         touchMultiplier: 1.5,
       }}
     >
+      <GsapLenisSync />
       <AnchorScrollHandler />
       {children}
     </ReactLenis>

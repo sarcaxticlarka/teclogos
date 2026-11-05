@@ -1,12 +1,66 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Icons } from "@/components/ui/Icons";
 import { SERVICES_DATA } from "@/data/services";
 
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
+
 export function CapabilitiesSection() {
   const [activeTab, setActiveTab] = useState(SERVICES_DATA[0].id);
+
+  const containerRef = useRef<HTMLElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const showcaseRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const ctx = gsap.context(() => {
+      if (headerRef.current) {
+        gsap.fromTo(
+          headerRef.current,
+          { opacity: 0, y: 25 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: headerRef.current,
+              start: "top 85%",
+              once: true,
+            },
+          }
+        );
+      }
+
+      if (showcaseRef.current) {
+        gsap.fromTo(
+          showcaseRef.current,
+          { opacity: 0, y: 30 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: showcaseRef.current,
+              start: "top 85%",
+              once: true,
+            },
+          }
+        );
+      }
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
 
   const selectedService =
     SERVICES_DATA.find((s) => s.id === activeTab) || SERVICES_DATA[0];
@@ -31,10 +85,10 @@ export function CapabilitiesSection() {
   };
 
   return (
-    <section className="py-24 px-4 sm:px-6 bg-white border-b border-slate-200">
+    <section ref={containerRef} className="py-24 px-4 sm:px-6 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto space-y-12">
         {/* Editorial Section Heading - ABB Style */}
-        <div className="space-y-4 max-w-3xl">
+        <div ref={headerRef} className="space-y-4 max-w-3xl">
           <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-widest text-red-600">
             <span className="w-8 h-[2px] bg-red-600 inline-block" />
             <span>Turnkey Engineering Disciplines</span>
@@ -68,7 +122,7 @@ export function CapabilitiesSection() {
         </div>
 
         {/* Active Tab Showcase Card - Clean White Architectural Panel */}
-        <div className="bg-slate-50 border border-slate-200 p-8 sm:p-12 shadow-sm">
+        <div ref={showcaseRef} className="bg-slate-50 border border-slate-200 p-8 sm:p-12 shadow-sm">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             {/* Left 7 Columns: Technical Narrative & Deliverables */}
             <div className="lg:col-span-7 space-y-6">

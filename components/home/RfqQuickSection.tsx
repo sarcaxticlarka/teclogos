@@ -1,14 +1,49 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Icons } from "@/components/ui/Icons";
 import { COMPANY_DATA } from "@/data/company";
 import { InteractiveRfqModal } from "@/components/rfq/InteractiveRfqModal";
+
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 export function RfqQuickSection() {
   const [rfqModalOpen, setRfqModalOpen] = useState(false);
   const [selectedService, setSelectedService] = useState("turnkey-automation");
   const [selectedIndustry, setSelectedIndustry] = useState("power-generation");
+
+  const containerRef = useRef<HTMLElement>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const ctx = gsap.context(() => {
+      if (cardRef.current) {
+        gsap.fromTo(
+          cardRef.current,
+          { opacity: 0, y: 35 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: cardRef.current,
+              start: "top 85%",
+              once: true,
+            },
+          }
+        );
+      }
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
 
   const openScopedRfq = (srv: string, ind: string) => {
     setSelectedService(srv);
@@ -18,9 +53,9 @@ export function RfqQuickSection() {
 
   return (
     <>
-      <section className="py-24 px-4 sm:px-6 bg-slate-100 border-b border-slate-200">
+      <section ref={containerRef} className="py-24 px-4 sm:px-6 bg-slate-100 border-b border-slate-200">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-white border border-slate-200 p-8 sm:p-14 shadow-sm">
+          <div ref={cardRef} className="bg-white border border-slate-200 p-8 sm:p-14 shadow-sm">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               {/* Left Column: Technical Narrative & Commitments */}
               <div className="lg:col-span-7 space-y-6">

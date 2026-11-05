@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import gsap from "gsap";
 import { Icons } from "@/components/ui/Icons";
 import { COMPANY_DATA } from "@/data/company";
 import { TecLogosLogo } from "@/components/ui/TecLogosLogo";
@@ -301,6 +302,16 @@ export function Navbar() {
   const [rfqModalOpen, setRfqModalOpen] = useState(false);
 
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const navRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    if (!navRef.current) return;
+    gsap.fromTo(
+      navRef.current,
+      { y: -12, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" }
+    );
+  }, []);
 
   const handleMouseEnter = (title: string) => {
     if (timeoutRef.current) {
@@ -344,7 +355,12 @@ export function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 w-full bg-white transition-all duration-200">
+      <header
+        ref={navRef}
+        className={`sticky top-0 z-50 w-full bg-white transition-all duration-200 ${
+          isScrolled ? "shadow-sm bg-white/95 backdrop-blur-md" : ""
+        }`}
+      >
         {/* Sleek Minimalist Top Utility Bar - Ultra Slim, Low-Noise ABB Format (25px) */}
         <div className="hidden lg:block bg-slate-50/90 border-b border-slate-200/60 text-[11px] text-slate-500 py-1 px-6">
           <div className="max-w-7xl mx-auto flex items-center justify-between">

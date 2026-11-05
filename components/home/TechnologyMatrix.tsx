@@ -1,9 +1,15 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Icons } from "@/components/ui/Icons";
 import { TECHNOLOGIES_DATA } from "@/data/technologies";
+
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 const GLOSSARY_TERMS = [
   {
@@ -60,14 +66,62 @@ export function TechnologyMatrix() {
   const [selectedTech, setSelectedTech] = useState(TECHNOLOGIES_DATA[0].id);
   const [glossaryOpen, setGlossaryOpen] = useState(false);
 
+  const containerRef = useRef<HTMLElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const ctx = gsap.context(() => {
+      if (headerRef.current) {
+        gsap.fromTo(
+          headerRef.current,
+          { opacity: 0, y: 25 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: headerRef.current,
+              start: "top 85%",
+              once: true,
+            },
+          }
+        );
+      }
+
+      if (cardRef.current) {
+        gsap.fromTo(
+          cardRef.current,
+          { opacity: 0, y: 30 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: cardRef.current,
+              start: "top 85%",
+              once: true,
+            },
+          }
+        );
+      }
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
   const activeTech =
     TECHNOLOGIES_DATA.find((t) => t.id === selectedTech) || TECHNOLOGIES_DATA[0];
 
   return (
-    <section className="py-24 px-4 sm:px-6 bg-white border-b border-slate-200">
+    <section ref={containerRef} className="py-24 px-4 sm:px-6 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto space-y-12">
         {/* Section Header: ABB Editorial Style */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div ref={headerRef} className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-4 max-w-3xl">
             <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-widest text-red-600">
               <span className="w-8 h-[2px] bg-red-600 inline-block" />
@@ -144,7 +198,7 @@ export function TechnologyMatrix() {
         </div>
 
         {/* Selected OEM Deep Detail Card */}
-        <div className="bg-slate-50 border border-slate-200 p-8 sm:p-12 shadow-sm">
+        <div ref={cardRef} className="bg-slate-50 border border-slate-200 p-8 sm:p-12 shadow-sm">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             <div className="lg:col-span-7 space-y-6">
               <div className="space-y-1.5">

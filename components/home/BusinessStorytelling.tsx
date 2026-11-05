@@ -1,17 +1,135 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Icons } from "@/components/ui/Icons";
+
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 export function BusinessStorytelling() {
   const [activeStoryTab, setActiveStoryTab] = useState<"plain" | "business" | "engineers">("plain");
 
+  const containerRef = useRef<HTMLElement>(null);
+  const introHeaderRef = useRef<HTMLDivElement>(null);
+  const cardsGridRef = useRef<HTMLDivElement>(null);
+  const quoteRef = useRef<HTMLDivElement>(null);
+  const principlesGridRef = useRef<HTMLDivElement>(null);
+  const csrRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const ctx = gsap.context(() => {
+      // Intro heading reveal
+      if (introHeaderRef.current) {
+        gsap.fromTo(
+          introHeaderRef.current,
+          { opacity: 0, y: 25 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: introHeaderRef.current,
+              start: "top 85%",
+              once: true,
+            },
+          }
+        );
+      }
+
+      // 6 Core Solutions Cards Stagger
+      if (cardsGridRef.current) {
+        gsap.fromTo(
+          cardsGridRef.current.children,
+          { opacity: 0, y: 30 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.7,
+            stagger: 0.1,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: cardsGridRef.current,
+              start: "top 85%",
+              once: true,
+            },
+          }
+        );
+      }
+
+      // Leonardo da Vinci Quote Reveal
+      if (quoteRef.current) {
+        gsap.fromTo(
+          quoteRef.current,
+          { opacity: 0, y: 20 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: quoteRef.current,
+              start: "top 85%",
+              once: true,
+            },
+          }
+        );
+      }
+
+      // 5 Principles Stagger
+      if (principlesGridRef.current) {
+        gsap.fromTo(
+          principlesGridRef.current.children,
+          { opacity: 0, y: 25 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            stagger: 0.08,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: principlesGridRef.current,
+              start: "top 85%",
+              once: true,
+            },
+          }
+        );
+      }
+
+      // CSR Box Reveal
+      if (csrRef.current) {
+        gsap.fromTo(
+          csrRef.current,
+          { opacity: 0, y: 25 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: csrRef.current,
+              start: "top 88%",
+              once: true,
+            },
+          }
+        );
+      }
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section id="company-introduction" className="py-20 px-4 sm:px-6 bg-white border-b border-slate-200">
+    <section ref={containerRef} id="company-introduction" className="py-20 px-4 sm:px-6 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto space-y-16">
         {/* Section 2 (PDF Page 5): Short Company Introduction */}
-        <div className="space-y-4 max-w-3xl">
+        <div ref={introHeaderRef} className="space-y-4 max-w-3xl">
           <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-widest text-red-600">
             <span className="w-8 h-[2px] bg-red-600 inline-block" />
             <span>Company Introduction</span>
@@ -242,7 +360,7 @@ export function BusinessStorytelling() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div ref={cardsGridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Card 1: Industrial Automation */}
             <div className="editorial-card group flex flex-col justify-between">
               <div>
@@ -468,7 +586,7 @@ export function BusinessStorytelling() {
         </div>
 
         {/* Leonardo da Vinci Quote Section from content.txt - ABB Editorial Layout */}
-        <div className="border-t border-b border-slate-200 py-12 px-6 sm:px-12 bg-slate-50/50 flex flex-col md:flex-row items-center gap-8 justify-between">
+        <div ref={quoteRef} className="border-t border-b border-slate-200 py-12 px-6 sm:px-12 bg-slate-50/50 flex flex-col md:flex-row items-center gap-8 justify-between">
           <div className="max-w-2xl space-y-2">
             <span className="text-4xl sm:text-5xl font-serif text-red-600 leading-none">“</span>
             <p className="text-lg sm:text-2xl font-light text-slate-900 italic tracking-tight leading-snug">
@@ -497,7 +615,7 @@ export function BusinessStorytelling() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          <div ref={principlesGridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {[
               {
                 num: "01",
@@ -541,7 +659,7 @@ export function BusinessStorytelling() {
         </div>
 
         {/* Corporate Social Responsibility (CSR) Spotlight (Direct from content.txt) */}
-        <div className="p-8 sm:p-10 bg-slate-50 border border-slate-200 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div ref={csrRef} className="p-8 sm:p-10 bg-slate-50 border border-slate-200 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="space-y-2 max-w-2xl">
             <span className="text-xs font-mono font-bold uppercase tracking-wider text-red-600">
               Social Responsibility • Giving Back
