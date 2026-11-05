@@ -8,10 +8,17 @@ import { TecLogosLogo } from "@/components/ui/TecLogosLogo";
 import { SERVICES_DATA } from "@/data/services";
 import { INDUSTRIES_DATA } from "@/data/industries";
 import { TECHNOLOGIES_DATA } from "@/data/technologies";
+import { useLenis } from "lenis/react";
 
 export function Footer() {
+  const lenis = useLenis();
+
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (lenis) {
+      lenis.scrollTo(0, { duration: 1.2 });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
   return (

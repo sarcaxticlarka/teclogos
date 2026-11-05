@@ -21,7 +21,7 @@ export default function IndustriesPage() {
       case "power-generation":
         return "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1200&q=80"; // Power plant cooling towers / steam
       case "oil-gas":
-        return "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80"; // Petrochemical refinery piping
+        return "/images/services/service-02-ei.jpg"; // Petrochemical refinery piping & valves
       case "chemicals-process":
         return "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1200&q=80"; // High-tech processing vessels
       case "water-treatment":

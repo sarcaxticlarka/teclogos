@@ -24,91 +24,91 @@ export function Hero() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full relative z-10 py-24">
           <div className="max-w-3xl space-y-6">
-            {/* ABB-Style Red Bracket Accent */}
+            {/* ABB-Style Red Bracket Accent - Exactly as prescribed in Redesign Guide Page 5 */}
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-red-600 text-white text-xs font-mono font-bold uppercase tracking-widest">
-              Industrial Automation & Systems Integration
+              INDUSTRIAL AUTOMATION · ENGINEERING · INTEGRATION
             </div>
 
-            {/* Main Headline - Massive, Authoritative, Sans-Serif */}
+            {/* Main Headline - Exactly as prescribed in Redesign Guide Page 5 */}
             <h1 className="text-4xl sm:text-6xl font-black tracking-tight text-white leading-[1.08]">
-              Transforming Industry. Engineering High-Availability Automation.
+              Engineering intelligent systems for a connected industrial world.
             </h1>
 
-            {/* Subheadline - Clear, Direct, Business-Driven */}
+            {/* Supporting Text - Exactly as prescribed in Redesign Guide Page 5 */}
             <p className="text-base sm:text-xl text-slate-200 font-normal leading-relaxed max-w-2xl">
-              TecLogos architects, programs, fabricates, and commissions turnkey Distributed Control Systems (DCS), PLC/SCADA networks, and detailed electrical & instrumentation (E&I) packages across continuous process plants and smart infrastructure.
+              TecLogos brings automation, control systems and engineering services together to help industrial facilities monitor equipment, manage processes and keep operations running.
             </p>
 
-            {/* Primary Action Buttons - Sharp, High-Contrast */}
+            {/* Primary Action Buttons - Exactly as prescribed in Redesign Guide Page 5 */}
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">
-              <button
-                onClick={() => setRfqOpen(true)}
+              <a
+                href="#core-solutions"
                 className="w-full sm:w-auto px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-bold text-xs uppercase tracking-wider transition flex items-center justify-center gap-3 shadow-lg"
               >
-                <span>Request a Quote / Project Scope</span>
+                <span>Explore Our Solutions</span>
                 <Icons.ArrowRight className="w-4 h-4" />
-              </button>
+              </a>
 
-              <Link
-                href="/services"
+              <button
+                onClick={() => setRfqOpen(true)}
                 className="w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white text-white hover:text-slate-900 border border-white/30 font-bold text-xs uppercase tracking-wider transition flex items-center justify-center gap-3 backdrop-blur-sm"
               >
-                <span>Explore Capabilities</span>
+                <span>Discuss Your Project</span>
                 <Icons.ChevronRight className="w-4 h-4" />
-              </Link>
+              </button>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Structural Data Strip Below Hero - Clean Pure White Box with Sharp Borders */}
-      <div className="bg-white text-slate-900 border-b border-slate-200 py-8 px-4 sm:px-6 shadow-sm">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="border-l-2 border-red-600 pl-4 space-y-1">
-            <div className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight font-mono">
+      {/* Structural Data Strip Below Hero - Factual, Non-Quantified (Guide Page 16) */}
+      <div className="bg-white text-slate-900 border-b border-slate-200 py-6 sm:py-8 px-4 sm:px-6 shadow-xs">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div className="border-l-2 border-red-600 pl-4 py-0.5 space-y-1">
+            <div className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight whitespace-nowrap">
               Dec 2018
             </div>
-            <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <div className="text-[11px] font-mono font-bold text-slate-500 uppercase tracking-wider">
               Incorporated in Pune, India
             </div>
-            <p className="text-xs text-slate-600">
+            <p className="text-xs text-slate-600 leading-relaxed">
               Active engineering firm under RoC-Pune
             </p>
           </div>
 
-          <div className="border-l-2 border-red-600 pl-4 space-y-1">
-            <div className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight font-mono">
-              100% FAT
+          <div className="border-l-2 border-red-600 pl-4 py-0.5 space-y-1">
+            <div className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight whitespace-nowrap">
+              Simulated FAT
             </div>
-            <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-              Simulated Factory Testing
+            <div className="text-[11px] font-mono font-bold text-slate-500 uppercase tracking-wider">
+              Factory Acceptance Testing
             </div>
-            <p className="text-xs text-slate-600">
-              Zero-defect pre-shipment signal loop checks
+            <p className="text-xs text-slate-600 leading-relaxed">
+              Pre-dispatch loop checks and hardware verification
             </p>
           </div>
 
-          <div className="border-l-2 border-red-600 pl-4 space-y-1">
-            <div className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight font-mono">
-              Multi-OEM
+          <div className="border-l-2 border-red-600 pl-4 py-0.5 space-y-1">
+            <div className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight whitespace-nowrap">
+              Multi-Platform
             </div>
-            <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-              Vendor-Independent Fluency
+            <div className="text-[11px] font-mono font-bold text-slate-500 uppercase tracking-wider">
+              Engineering Fluency
             </div>
-            <p className="text-xs text-slate-600">
+            <p className="text-xs text-slate-600 leading-relaxed">
               Honeywell, Siemens, ABB, Rockwell & Niagara
             </p>
           </div>
 
-          <div className="border-l-2 border-red-600 pl-4 space-y-1">
-            <div className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight font-mono">
-              SIL 2 / SIL 3
+          <div className="border-l-2 border-red-600 pl-4 py-0.5 space-y-1">
+            <div className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight whitespace-nowrap">
+              Turnkey Scope
             </div>
-            <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-              Functional Process Safety
+            <div className="text-[11px] font-mono font-bold text-slate-500 uppercase tracking-wider">
+              Field to Control Room
             </div>
-            <p className="text-xs text-slate-600">
-              IEC 61511 Safety Instrumented Systems
+            <p className="text-xs text-slate-600 leading-relaxed">
+              From P&ID review to panel assembly and site testing
             </p>
           </div>
         </div>

@@ -26,7 +26,7 @@ export default function TechnologiesPage() {
           <div
             className="absolute inset-0 bg-cover bg-center opacity-30"
             style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=2000&q=80')`,
+              backgroundImage: `url('/images/services/service-04-panels.jpg')`,
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-900/60" />
@@ -193,7 +193,7 @@ export default function TechnologiesPage() {
                         FAT Simulation Guarantee
                       </span>
                       <p className="text-xs text-slate-600 leading-relaxed">
-                        Every control application is tested against dynamic simulated I/O before site shipment to guarantee zero logic errors during live plant cutover.
+                        Every control application is tested against dynamic simulated I/O before site shipment to drastically minimize commissioning risks and logic errors during live plant cutover.
                       </p>
                     </div>
                   </div>

@@ -22,7 +22,7 @@ export default function AboutPage() {
           <div
             className="absolute inset-0 bg-cover bg-center opacity-30"
             style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=2000&q=80')`,
+              backgroundImage: `url('/images/services/service-01-automation.jpg')`,
             }}
           />
           <div className="max-w-7xl mx-auto space-y-6 relative z-10">
@@ -75,7 +75,7 @@ export default function AboutPage() {
                 <div className="p-5 bg-slate-50 border-l-4 border-slate-900 space-y-1">
                   <span className="text-xs font-bold text-slate-900 flex items-center gap-2">
                     <Icons.Check className="w-4 h-4 text-slate-900" />
-                    100% Pre-Shipment FAT
+                    Rigorous Pre-Shipment FAT
                   </span>
                   <p className="text-xs text-slate-600">
                     Every digital and analog signal is pre-simulated in our Pune testing bay before dispatch.
@@ -149,7 +149,7 @@ export default function AboutPage() {
             <div className="space-y-3 max-w-3xl">
               <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-widest text-red-600">
                 <span className="w-8 h-[2px] bg-red-600 inline-block" />
-                <span>Our Principles from content.txt</span>
+                <span>Our Five Guiding Principles</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
                 The Five Principles That Guide Our Operations

@@ -3,6 +3,11 @@
 :root {
   --background: #ffffff;
   --foreground: #0f172a;
+  --primary-white: #ffffff;
+  --soft-grey: #f4f5f5;
+  --cool-light-grey: #e9edef;
+  --charcoal: #20272b;
+  --deep-charcoal: #171d20;
   --abb-red: #e00500;
   --abb-red-dark: #b80400;
   --neutral-50: #f8fafc;

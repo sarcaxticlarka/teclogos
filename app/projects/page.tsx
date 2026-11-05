@@ -23,7 +23,7 @@ export default function ProjectsPage() {
       case "thermal-power-bop":
         return "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1200&q=80"; // Power plant steam & towers
       case "refinery-esd-migration":
-        return "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80"; // Refinery piping
+        return "/images/services/service-02-ei.jpg"; // Refinery piping & valves
       case "municipal-water-scada":
         return "https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?auto=format&fit=crop&w=1200&q=80"; // Water pumps & clarifier
       case "cement-kiln-optimization":
@@ -31,7 +31,7 @@ export default function ProjectsPage() {
       case "commercial-bms-niagara":
         return "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"; // Smart glass tower
       default:
-        return "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=1200&q=80";
+        return "/images/services/service-05-modernisation.jpg";
     }
   };
 
@@ -45,7 +45,7 @@ export default function ProjectsPage() {
           <div
             className="absolute inset-0 bg-cover bg-center opacity-30"
             style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=2000&q=80')`,
+              backgroundImage: `url('/images/services/service-01-automation.jpg')`,
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-900/60" />

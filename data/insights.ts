@@ -55,7 +55,7 @@ export const INSIGHTS_DATA: TechnicalArticle[] = [
   {
     id: "fat-acceptance-testing-checklist",
     slug: "fat-acceptance-testing-checklist",
-    title: "The Zero-Defect Factory Acceptance Testing (FAT) Protocol: Eliminating Costly Commissioning Delays",
+    title: "The Rigorous Factory Acceptance Testing (FAT) Protocol: Eliminating Costly Commissioning Delays",
     category: "Quality Assurance & Testing",
     readTime: "6 min read",
     publishedDate: "October 2026",
@@ -64,14 +64,14 @@ export const INSIGHTS_DATA: TechnicalArticle[] = [
       "Why resolving software logic flaws and wiring errors in the controlled environment of a fabrication workshop is 10 times cheaper and 20 times faster than troubleshooting on an active plant site.",
     keyTakeaways: [
       "Every unresolved bug discovered during site commissioning costs roughly 10x more in engineer hours and schedule delay compared to workshop detection.",
-      "100% simulated I/O testing—including open-circuit, short-circuit, and out-of-range sensor simulation—must be completed before client arrival.",
+      "Comprehensive simulated I/O testing—including open-circuit, short-circuit, and out-of-range sensor simulation—must be completed before client arrival.",
       "A structured Cause & Effect (C&E) matrix test guarantees that emergency shutdowns trip the exact valves required without uncommanded side effects.",
       "Signed FAT dossiers provide legal protection and contractual milestone sign-offs for EPC contractors and end users alike.",
     ],
     content: [
       {
         sectionHeading: "The Economic Imperative: Why We Test in the Workshop",
-        body: "On a construction site, temperatures can exceed 45°C or drop below freezing. Scaffolding, welding equipment, and noise make focused software debugging nearly impossible. Trying to diagnose an ungrounded 24V DC signal loop or an inverted boolean interlock while contractors are waiting to pour concrete is an expensive nightmare. At TecLogos, our foundational policy is that no control cabinet leaves our Pune facility until 100% of the hardware and software has passed simulated operational testing.",
+        body: "On a construction site, temperatures can exceed 45°C or drop below freezing. Scaffolding, welding equipment, and noise make focused software debugging nearly impossible. Trying to diagnose an ungrounded 24V DC signal loop or an inverted boolean interlock while contractors are waiting to pour concrete is an expensive nightmare. At TecLogos, our foundational policy is that no control cabinet leaves our Pune facility until every hardware loop and software routine has passed simulated operational testing.",
       },
       {
         sectionHeading: "Hardware Verification Phase: Point-to-Point Continuity & Megger Checks",

@@ -30,8 +30,8 @@ const WORKFLOW_STEPS = [
   },
   {
     step: "04",
-    phase: "100% Simulated FAT Protocol",
-    tagline: "Zero-Defect Workshop Signal Emulation",
+    phase: "Simulated Factory Acceptance Testing (FAT)",
+    tagline: "Rigorous Workshop Signal & Logic Emulation",
     description:
       "Before any panel leaves our facility, we power up the controllers, inject simulated 4-20mA signals, emulate plant dynamics, and walk client engineers through every line of code and Cause & Effect emergency shutdown interlock.",
     deliverables: ["Factory Acceptance Test Report", "Cause & Effect Sign-off", "Emulated Loop Validation Dossier"],

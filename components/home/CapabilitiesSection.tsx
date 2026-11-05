@@ -14,19 +14,19 @@ export function CapabilitiesSection() {
   const getServiceImage = (id: string) => {
     switch (id) {
       case "industrial-automation":
-        return "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=800&q=80"; // DCS Control Room Station
+        return "/images/services/service-01-automation.jpg"; // DCS Control Room Station
       case "ei-engineering":
-        return "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"; // CAD schematics & engineering design
+        return "/images/services/service-02-ei.jpg"; // Industrial Piping, Valves & Transmitters
       case "control-panels":
-        return "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80"; // Control panel fabrication & wiring
+        return "/images/services/service-04-panels.jpg"; // Control panel fabrication & wiring
       case "building-automation":
-        return "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"; // Commercial BMS skyscraper
+        return "/images/services/service-03-bms.jpg"; // Commercial BMS skyscraper
       case "migration-modernization":
-        return "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80"; // Refinery plant retrofit & hot cutover
+        return "/images/services/service-05-modernisation.jpg"; // Heavy industrial plant modernisation
       case "lifecycle-support":
-        return "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=800&q=80"; // Site engineer in safety gear
+        return "/images/services/service-06-commissioning.jpg"; // Site engineer in safety gear
       default:
-        return "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80";
+        return "/images/services/service-01-automation.jpg";
     }
   };
 

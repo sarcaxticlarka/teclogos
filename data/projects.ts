@@ -78,7 +78,7 @@ export const PROJECTS_DATA: CaseStudy[] = [
     ],
     architectureBadge: "SIL-3 Safety Instrumented System",
     imageUrl:
-      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
+      "/images/services/service-02-ei.jpg",
   },
   {
     id: "water-utility-scada-distribution",
@@ -171,7 +171,7 @@ export const PROJECTS_DATA: CaseStudy[] = [
     ],
     architectureBadge: "DCS & High-Torque Drive Integration",
     imageUrl:
-      "https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80",
+      "/images/services/service-05-modernisation.jpg",
   },
 ];
 

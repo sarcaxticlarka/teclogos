@@ -91,7 +91,7 @@ export const INDUSTRIES_DATA: IndustrySector[] = [
       { label: "Hazardous Compliance", value: "Zone 1 / Zone 2" },
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
+      "/images/services/service-02-ei.jpg",
   },
   {
     id: "water-treatment",
@@ -167,7 +167,7 @@ export const INDUSTRIES_DATA: IndustrySector[] = [
       { label: "Conveyor Stoppage Reduction", value: "45%" },
     ],
     imageUrl:
-      "https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80",
+      "/images/services/service-05-modernisation.jpg",
   },
   {
     id: "steel-metals",

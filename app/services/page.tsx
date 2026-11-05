@@ -94,6 +94,17 @@ export default function ServicesPage() {
                   </button>
                 </div>
 
+                {/* 2-Layer Writing: Simple Explanation (Guide Page 7 & 15) */}
+                <div className="p-4 bg-slate-50 border-l-4 border-red-600 text-xs text-slate-700 flex items-start gap-3">
+                  <Icons.Info className="w-4 h-4 text-red-600 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-bold text-slate-900 block font-mono text-[10.5px] uppercase tracking-wider mb-0.5">
+                      Plain-English Meaning
+                    </span>
+                    <span className="text-slate-600 leading-relaxed text-[12.5px]">{service.simpleExplanation}</span>
+                  </div>
+                </div>
+
                 {/* 3-Column Educational & Technical Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                   {/* Column 1: The Challenge & Why It Matters */}

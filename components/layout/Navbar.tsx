@@ -57,7 +57,7 @@ const NAV_STRUCTURE: NavSection[] = [
           {
             title: "Control Panel Fabrication & FAT",
             href: "/services#control-panels",
-            desc: "Custom PLC, DCS, and Marshalling cabinets built with 100% pre-dispatch loop simulation in Pune.",
+            desc: "Custom PLC, DCS, and Marshalling cabinets built with pre-dispatch loop simulation in Pune.",
             badge: "Pune Workshop",
           },
         ],
@@ -88,11 +88,11 @@ const NAV_STRUCTURE: NavSection[] = [
     ],
     featured: {
       badge: "Pune Integration Hub",
-      title: "100% Pre-Commissioned FAT Simulation",
+      title: "Rigorous Pre-Commissioned FAT Simulation",
       desc: "Every control panel leaves our Pune workshop pre-wired, simulated with virtual I/O, and thoroughly validated before site delivery — slashing on-site commissioning time by up to 40%.",
       href: "/services",
       linkText: "Explore Engineering Capabilities",
-      imageUrl: "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=700&q=80",
+      imageUrl: "/images/services/service-04-panels.jpg",
     },
   },
   {
@@ -276,7 +276,7 @@ const NAV_STRUCTURE: NavSection[] = [
       desc: "Inspired by Leonardo da Vinci's maxim, we eliminate unnecessary complexity in automation systems to deliver rock-solid, transparent, and serviceable engineering.",
       href: "/about",
       linkText: "Read Company Story",
-      imageUrl: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=700&q=80",
+      imageUrl: "/images/services/service-06-commissioning.jpg",
     },
   },
   {

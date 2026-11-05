@@ -5,156 +5,182 @@ import Link from "next/link";
 import { Icons } from "@/components/ui/Icons";
 
 export function BusinessStorytelling() {
-  const [activeStoryTab, setActiveStoryTab] = useState<"kids" | "business" | "engineers">("kids");
+  const [activeStoryTab, setActiveStoryTab] = useState<"plain" | "business" | "engineers">("plain");
 
   return (
-    <section className="py-20 px-4 sm:px-6 bg-white border-b border-slate-200">
+    <section id="company-introduction" className="py-20 px-4 sm:px-6 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto space-y-16">
-        {/* Section Header: ABB Editorial Style */}
+        {/* Section 2 (PDF Page 5): Short Company Introduction */}
         <div className="space-y-4 max-w-3xl">
           <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-widest text-red-600">
             <span className="w-8 h-[2px] bg-red-600 inline-block" />
-            <span>The TecLogos Story</span>
+            <span>Company Introduction</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
-            Who We Are, What We Do & How We Power Industry
+          <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-[1.12]">
+            Engineering that connects people, machines and processes.
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-            From the factory floor to the commercial skyscraper, here is how TecLogos transforms complex industrial machinery into safe, automated, and energy-efficient operations.
+            Factories and industrial plants depend on many systems working together. TecLogos provides engineering and automation services that help connect equipment, control systems and operator interfaces. From understanding the requirement to engineering, testing and commissioning, the company supports the stages agreed for each project.
           </p>
         </div>
 
-        {/* Interactive "Perspective Switcher" (Explain Like I'm 10 vs. Business Executive vs. Plant Engineer) */}
+        {/* Interactive 2-Layer Perspective Explainer (PDF Page 2, 3 & 15) */}
         <div className="bg-slate-50 border border-slate-200 p-6 sm:p-10 space-y-8">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 pb-4">
             <span className="text-xs font-mono uppercase tracking-wider text-slate-500 font-bold">
-              Choose Your Perspective:
+              Explore Our Work by Perspective:
             </span>
             <div className="flex items-center gap-2">
               <button
-                onClick={() => setActiveStoryTab("kids")}
-                className={`px-3.5 py-1.5 text-xs font-bold transition rounded-xs ${
-                  activeStoryTab === "kids"
+                onClick={() => setActiveStoryTab("plain")}
+                className={`px-3.5 py-1.5 text-xs font-bold transition ${
+                  activeStoryTab === "plain"
                     ? "bg-red-600 text-white shadow-2xs"
                     : "bg-white text-slate-700 border border-slate-200 hover:border-slate-300"
                 }`}
               >
-                In 60 Seconds (Simple Analogy)
+                Plain English (How It Works)
               </button>
               <button
                 onClick={() => setActiveStoryTab("business")}
-                className={`px-3.5 py-1.5 text-xs font-bold transition rounded-xs ${
+                className={`px-3.5 py-1.5 text-xs font-bold transition ${
                   activeStoryTab === "business"
                     ? "bg-red-600 text-white shadow-2xs"
                     : "bg-white text-slate-700 border border-slate-200 hover:border-slate-300"
                 }`}
               >
-                Business & ROI Perspective
+                Business & Operational Value
               </button>
               <button
                 onClick={() => setActiveStoryTab("engineers")}
-                className={`px-3.5 py-1.5 text-xs font-bold transition rounded-xs ${
+                className={`px-3.5 py-1.5 text-xs font-bold transition ${
                   activeStoryTab === "engineers"
                     ? "bg-red-600 text-white shadow-2xs"
                     : "bg-white text-slate-700 border border-slate-200 hover:border-slate-300"
                 }`}
               >
-                Technical Engineering Perspective
+                Technical Architecture
               </button>
             </div>
           </div>
 
-          {/* Perspective 1: In 60 Seconds (Simple Analogy) */}
-          {activeStoryTab === "kids" && (
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              <div className="lg:col-span-7 space-y-4">
+          {/* Perspective 1: Plain English / Child-Friendly (Guide Page 2 & 3) */}
+          {activeStoryTab === "plain" && (
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <div className="lg:col-span-6 space-y-4">
                 <span className="text-xs font-mono font-bold text-red-600 uppercase tracking-widest">
                   Simple Explanation
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
-                  We Build the Brain and Nervous System of Giant Factories.
+                  What is industrial automation?
                 </h3>
                 <div className="space-y-3 text-sm text-slate-600 leading-relaxed">
                   <p>
-                    Think of a giant power station, an oil refinery, or a city water treatment plant. It has <strong>thousands of giant pipes, valves, heaters, and water pumps</strong>.
+                    Industrial automation means using sensors, computers, controllers and machines to perform or manage work in a factory or plant. Instead of a person manually checking every machine all the time, connected systems can collect information and help operators control the process.
                   </p>
                   <p>
-                    A human being cannot run around turning 2,000 valves by hand every second without making a mistake! If a valve opens too late, the pipe could burst. If a boiler gets too hot, the whole plant could shut down.
+                    <strong>A simple example:</strong> Imagine a big factory making food, cement or electricity. Many machines must work in the right order. Sensors act like the factory's eyes. Controllers act like its brain. Motors and valves do the physical work. Screens help people see what is happening.
                   </p>
                   <p>
-                    <strong>That is what TecLogos does:</strong> We build the smart electronic brains (computers called PLCs and DCS) and wire them to thousands of sensors. When a pipe gets too hot, our computer notices in one millisecond and automatically turns the cooling valve. The factory runs smoothly, safely, and cleanly 24 hours a day without any human getting hurt.
+                    TecLogos connects these parts with custom wiring, control logic, and operator screens so facilities run safely, reliably, and efficiently.
                   </p>
                 </div>
               </div>
 
-              <div className="lg:col-span-5 bg-white border border-slate-200 p-6 space-y-4">
-                <div className="text-xs font-mono uppercase text-slate-400 font-bold">
-                  The Simple 3-Part Formula:
+              {/* Simple Example Table from Guide Page 3 */}
+              <div className="lg:col-span-6 bg-white border border-slate-200 p-5 space-y-3">
+                <div className="text-xs font-mono uppercase text-slate-500 font-bold border-b border-slate-100 pb-2 flex items-center justify-between">
+                  <span>How Parts Connect: Water Treatment Plant Example</span>
+                  <span className="text-[10px] text-red-600 font-mono">Process Analogy</span>
                 </div>
-                <div className="space-y-3 text-xs">
-                  <div className="p-3 bg-slate-50 border-l-2 border-red-600">
-                    <strong className="text-slate-900 block font-bold">1. The Senses (Sensors)</strong>
-                    <span className="text-slate-600">Thermometers and pressure gauges that feel the heat and flow in the pipes.</span>
-                  </div>
-                  <div className="p-3 bg-slate-50 border-l-2 border-slate-900">
-                    <strong className="text-slate-900 block font-bold">2. The Brain (Our Controllers)</strong>
-                    <span className="text-slate-600">Rugged industrial computers programmed by TecLogos engineers to make millisecond decisions.</span>
-                  </div>
-                  <div className="p-3 bg-slate-50 border-l-2 border-red-600">
-                    <strong className="text-slate-900 block font-bold">3. The Muscles (Valves & Motors)</strong>
-                    <span className="text-slate-600">Heavy electric motors and valves that physically move and pump based on our commands.</span>
-                  </div>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-left text-xs">
+                    <thead>
+                      <tr className="border-b border-slate-100 text-slate-400 font-mono text-[10.5px]">
+                        <th className="pb-2 font-bold uppercase">Part</th>
+                        <th className="pb-2 font-bold uppercase">Simple Meaning</th>
+                        <th className="pb-2 font-bold uppercase">Real Example</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-100">
+                      <tr>
+                        <td className="py-2.5 font-bold text-slate-900">Sensor (Eyes)</td>
+                        <td className="py-2.5 text-slate-600">Measures what is happening.</td>
+                        <td className="py-2.5 text-slate-500 font-mono text-[11px]">Measures water level or pressure.</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2.5 font-bold text-slate-900">Controller (Brain)</td>
+                        <td className="py-2.5 text-slate-600">Makes decisions using rules.</td>
+                        <td className="py-2.5 text-slate-500 font-mono text-[11px]">Starts a pump when tank level is low.</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2.5 font-bold text-slate-900">Motor / Valve (Muscles)</td>
+                        <td className="py-2.5 text-slate-600">Does the physical work.</td>
+                        <td className="py-2.5 text-slate-500 font-mono text-[11px]">Moves water through a pipe.</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2.5 font-bold text-slate-900">SCADA / Screen</td>
+                        <td className="py-2.5 text-slate-600">Shows info to the operator.</td>
+                        <td className="py-2.5 text-slate-500 font-mono text-[11px]">Displays levels, alarms and trends.</td>
+                      </tr>
+                      <tr>
+                        <td className="py-2.5 font-bold text-slate-900">Network</td>
+                        <td className="py-2.5 text-slate-600">Lets devices exchange data.</td>
+                        <td className="py-2.5 text-slate-500 font-mono text-[11px]">Connects sensors to control screens.</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
           )}
 
-          {/* Perspective 2: Business & ROI Perspective */}
+          {/* Perspective 2: Business & Operational Value (Guide Page 15) */}
           {activeStoryTab === "business" && (
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-7 space-y-4">
                 <span className="text-xs font-mono font-bold text-red-600 uppercase tracking-widest">
-                  Executive Value Proposition
+                  Operational Value
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
-                  Protecting Plant Availability, Eliminating OEM Lock-in & Slashing Energy Costs.
+                  Protecting Plant Availability & Eliminating Single-Vendor Lock-in.
                 </h3>
                 <div className="space-y-3 text-sm text-slate-600 leading-relaxed">
                   <p>
-                    For plant owners, industrial CEOs, and EPC contractors, unplanned downtime costs between <strong>\$20,000 and \$200,000 per hour</strong> in lost output.
+                    For plant owners and project teams, unexpected equipment stoppage causes immediate production loss, off-specification batches, and costly emergency contractor callouts.
                   </p>
                   <p>
-                    Moreover, global automation OEMs (Honeywell, Siemens, ABB, Rockwell) frequently lock customers into expensive captive service contracts, charging inflated hourly rates and forcing total hardware replacements for minor upgrades.
+                    Furthermore, single-brand manufacturers often lock facilities into proprietary hardware and expensive captive service rates.
                   </p>
                   <p>
-                    <strong>The TecLogos Advantage:</strong> We are a vendor-independent integration partner. We provide the exact same OEM-grade programming discipline and SIL-3 safety systems, but at competitive domestic rates. We upgrade aging 20-year-old control systems during short maintenance windows with <em>zero unplanned plant downtime</em>.
+                    <strong>The TecLogos Approach:</strong> We provide independent systems integration. We select and configure the exact controller platform suited to your facility, upgrade legacy control cabinets while planning carefully to reduce disruption, and test everything thoroughly before site delivery.
                   </p>
                 </div>
               </div>
 
-              <div className="lg:col-span-5 bg-white border border-slate-200 p-6 space-y-4">
+              <div className="lg:col-span-5 bg-white border border-slate-200 p-6 space-y-3 text-xs">
                 <div className="text-xs font-mono uppercase text-slate-400 font-bold">
-                  Business ROI Metrics:
+                  Core Business Benefits:
                 </div>
-                <div className="space-y-3 text-xs">
-                  <div className="p-3 bg-slate-50 border-l-2 border-emerald-600">
-                    <strong className="text-slate-900 block font-bold">15% – 35% HVAC Energy Savings</strong>
-                    <span className="text-slate-600">Verified electricity reduction in commercial towers using our Niagara N4 chiller staging algorithms.</span>
-                  </div>
+                <div className="space-y-2.5">
                   <div className="p-3 bg-slate-50 border-l-2 border-red-600">
-                    <strong className="text-slate-900 block font-bold">Zero-Downtime Migration</strong>
-                    <span className="text-slate-600">Upgrading legacy TDC3000 and SLC 500 without rewiring field cables, saving up to 70% in capital expenditure.</span>
+                    <strong className="text-slate-900 block font-bold">Reduced Operational Disruption</strong>
+                    <span className="text-slate-600">Carefully staged migrations of older systems reduce downtime during changeovers.</span>
                   </div>
                   <div className="p-3 bg-slate-50 border-l-2 border-slate-900">
-                    <strong className="text-slate-900 block font-bold">Fast-Track EPC Turnaround</strong>
-                    <span className="text-slate-600">Pre-bid BOQ engineering and 100% pre-commissioned panels prevent costly on-site contractor delays.</span>
+                    <strong className="text-slate-900 block font-bold">Vendor-Independent Selection</strong>
+                    <span className="text-slate-600">Hardware and software chosen solely on technical suitability and lifecycle cost.</span>
+                  </div>
+                  <div className="p-3 bg-slate-50 border-l-2 border-red-600">
+                    <strong className="text-slate-900 block font-bold">Energy & Utility Visibility</strong>
+                    <span className="text-slate-600">Sub-metering and chiller/HVAC management for quantifiable electricity savings.</span>
                   </div>
                 </div>
               </div>
             </div>
           )}
 
-          {/* Perspective 3: Technical Engineering Perspective */}
+          {/* Perspective 3: Technical Architecture */}
           {activeStoryTab === "engineers" && (
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
               <div className="lg:col-span-7 space-y-4">
@@ -162,44 +188,283 @@ export function BusinessStorytelling() {
                   Technical Architecture
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
-                  Multi-Vendor Distributed Control, Safety Instrumented Systems & E&I Blueprints.
+                  Multi-Platform Distributed Control, Safety Systems & Detailed E&I Schematics.
                 </h3>
                 <div className="space-y-3 text-sm text-slate-600 leading-relaxed">
                   <p>
-                    TecLogos operates across Level 0 to Level 3 of the industrial automation pyramid. We prepare comprehensive Instrumentation & Electrical (I&E) deliverables, including P&ID reviews, Instrument Indexes, Loop Schematics, Cable Sizing, and Marshalling Cabinet General Arrangement (GA) drawings.
+                    TecLogos operates across Level 0 (field instrumentation) to Level 3 (supervisory operations) of the industrial automation pyramid. We prepare comprehensive Electrical & Instrumentation (E&I) deliverables: P&ID analysis, Instrument Indexes, Loop Schematics, Cable Sizing, and Marshalling Cabinet GA drawings.
                   </p>
                   <p>
-                    Our core technical lineage comes from senior engineers formerly with Honeywell. We program continuous process algorithms in Honeywell Experion PKS (C200/C300), configure Siemens TIA Portal S7-1500R redundant PLCs, deploy ABB System 800xA (AC 800M), and build SIL-2 / SIL-3 Safety Instrumented Systems (Honeywell Safety Manager / FSC).
+                    Our engineering team brings hands-on experience across Honeywell Experion PKS/TPS, Siemens S7-1500/TIA Portal, ABB System 800xA, Rockwell ControlLogix, and open Tridium Niagara N4 frameworks.
                   </p>
                   <p>
-                    Every panel undergoes strict 100% Factory Acceptance Testing (FAT) with simulated I/O injection before shipment, ensuring verified cause-and-effect matrix execution.
+                    All control cabinets undergo structured Factory Acceptance Testing (FAT) with simulated I/O verification before dispatch to site.
                   </p>
                 </div>
               </div>
 
               <div className="lg:col-span-5 bg-white border border-slate-200 p-6 space-y-3 text-xs">
                 <div className="text-xs font-mono uppercase text-slate-400 font-bold mb-2">
-                  Engineering Stack & Standards:
+                  Technical Standards & Platforms:
                 </div>
                 <div className="p-2.5 bg-slate-50 border border-slate-200 flex items-center justify-between">
-                  <span className="font-bold text-slate-900">DCS / Safety Systems:</span>
-                  <span className="font-mono text-red-600">Experion PKS, TPS, Safety Manager</span>
+                  <span className="font-bold text-slate-900">DCS / Controllers:</span>
+                  <span className="font-mono text-red-600">Honeywell, Siemens, ABB, Rockwell</span>
                 </div>
                 <div className="p-2.5 bg-slate-50 border border-slate-200 flex items-center justify-between">
-                  <span className="font-bold text-slate-900">PLC & HMI:</span>
-                  <span className="font-mono text-slate-700">Siemens S7, WinCC, ControlLogix</span>
+                  <span className="font-bold text-slate-900">Building Automation:</span>
+                  <span className="font-mono text-slate-700">Tridium Niagara N4, BACnet, Modbus</span>
                 </div>
                 <div className="p-2.5 bg-slate-50 border border-slate-200 flex items-center justify-between">
-                  <span className="font-bold text-slate-900">Open BMS Frameworks:</span>
-                  <span className="font-mono text-slate-700">Tridium Niagara N4, Spyder, BACnet</span>
+                  <span className="font-bold text-slate-900">Programming Languages:</span>
+                  <span className="font-mono text-slate-700">IEC 61131-3 (Ladder, FBD, SCL)</span>
                 </div>
                 <div className="p-2.5 bg-slate-50 border border-slate-200 flex items-center justify-between">
-                  <span className="font-bold text-slate-900">Compliance Directives:</span>
-                  <span className="font-mono text-slate-700">IEC 61131-3, IEC 61511, ISA-88/101</span>
+                  <span className="font-bold text-slate-900">Safety & Standards:</span>
+                  <span className="font-mono text-slate-700">IEC 61511, ISA-88, ISA-101</span>
                 </div>
               </div>
             </div>
           )}
+        </div>
+
+        {/* Section 3 (PDF Page 5 & 6): The 6 Core Service Cards */}
+        <div id="core-solutions" className="space-y-8 pt-4">
+          <div className="space-y-2">
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-red-600">
+              Core Engineering Services
+            </span>
+            <h3 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight">
+              Six Key Solutions Delivered by TecLogos
+            </h3>
+            <p className="text-sm sm:text-base text-slate-600 max-w-2xl">
+              Specialized automation and electrical engineering disciplines across the complete project lifecycle.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Card 1: Industrial Automation */}
+            <div className="editorial-card group flex flex-col justify-between">
+              <div>
+                <div className="relative h-44 w-full overflow-hidden bg-slate-100">
+                  <img
+                    src="/images/services/service-01-automation.jpg"
+                    alt="Industrial Process Automation & DCS Control Room"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="eager"
+                  />
+                </div>
+                <div className="p-6 space-y-2.5">
+                  <span className="text-[10px] font-mono font-bold uppercase text-red-600 tracking-wider">
+                    Service 01 • Process Control
+                  </span>
+                  <h4 className="text-lg font-bold text-slate-900 group-hover:text-red-600 transition">
+                    Industrial Automation
+                  </h4>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    Systems that help factories and plants monitor and control machines and processes.
+                  </p>
+                  <p className="text-[11px] text-slate-500 pt-1">
+                    Includes PLC, DCS, SCADA, HMI, and control system software integration.
+                  </p>
+                </div>
+              </div>
+              <div className="p-6 pt-0">
+                <Link
+                  href="/services#industrial-automation"
+                  className="text-xs font-bold text-red-600 hover:text-red-700 flex items-center gap-1.5 transition"
+                >
+                  <span>Explore Industrial Automation</span>
+                  <Icons.ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Card 2: Electrical & Instrumentation */}
+            <div className="editorial-card group flex flex-col justify-between">
+              <div>
+                <div className="relative h-44 w-full overflow-hidden bg-slate-100">
+                  <img
+                    src="/images/services/service-02-ei.jpg"
+                    alt="Electrical & Instrumentation Detailed Engineering"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="eager"
+                  />
+                </div>
+                <div className="p-6 space-y-2.5">
+                  <span className="text-[10px] font-mono font-bold uppercase text-red-600 tracking-wider">
+                    Service 02 • Detailed Design
+                  </span>
+                  <h4 className="text-lg font-bold text-slate-900 group-hover:text-red-600 transition">
+                    Electrical & Instrumentation
+                  </h4>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    Engineering for power, wiring and devices that measure pressure, temperature, flow and other conditions.
+                  </p>
+                  <p className="text-[11px] text-slate-500 pt-1">
+                    Deliverables: Instrument Index, datasheets, loop drawings, and cable schedules.
+                  </p>
+                </div>
+              </div>
+              <div className="p-6 pt-0">
+                <Link
+                  href="/services#ei-engineering"
+                  className="text-xs font-bold text-red-600 hover:text-red-700 flex items-center gap-1.5 transition"
+                >
+                  <span>Explore E&I Engineering</span>
+                  <Icons.ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Card 3: Building Automation */}
+            <div className="editorial-card group flex flex-col justify-between">
+              <div>
+                <div className="relative h-44 w-full overflow-hidden bg-slate-100">
+                  <img
+                    src="/images/services/service-03-bms.jpg"
+                    alt="Building Management Systems & Smart Facilities"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="eager"
+                  />
+                </div>
+                <div className="p-6 space-y-2.5">
+                  <span className="text-[10px] font-mono font-bold uppercase text-red-600 tracking-wider">
+                    Service 03 • Smart OT
+                  </span>
+                  <h4 className="text-lg font-bold text-slate-900 group-hover:text-red-600 transition">
+                    Building Automation
+                  </h4>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    Systems that help manage building equipment such as heating, ventilation, air conditioning and energy monitoring.
+                  </p>
+                  <p className="text-[11px] text-slate-500 pt-1">
+                    Platforms: Tridium Niagara N4, Honeywell Spyder, and open BACnet/IP frameworks.
+                  </p>
+                </div>
+              </div>
+              <div className="p-6 pt-0">
+                <Link
+                  href="/services#building-automation"
+                  className="text-xs font-bold text-red-600 hover:text-red-700 flex items-center gap-1.5 transition"
+                >
+                  <span>Explore Building Automation</span>
+                  <Icons.ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Card 4: Control Panel Engineering */}
+            <div className="editorial-card group flex flex-col justify-between">
+              <div>
+                <div className="relative h-44 w-full overflow-hidden bg-slate-100">
+                  <img
+                    src="/images/services/service-04-panels.jpg"
+                    alt="Control Panel Fabrication & FAT Assembly"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="eager"
+                  />
+                </div>
+                <div className="p-6 space-y-2.5">
+                  <span className="text-[10px] font-mono font-bold uppercase text-red-600 tracking-wider">
+                    Service 04 • Workshop Assembly
+                  </span>
+                  <h4 className="text-lg font-bold text-slate-900 group-hover:text-red-600 transition">
+                    Control Panel Engineering
+                  </h4>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    Designing and assembling electrical cabinets that house control and automation equipment.
+                  </p>
+                  <p className="text-[11px] text-slate-500 pt-1">
+                    Stages: Design → component selection → wiring → inspection → simulated FAT.
+                  </p>
+                </div>
+              </div>
+              <div className="p-6 pt-0">
+                <Link
+                  href="/services#control-panels"
+                  className="text-xs font-bold text-red-600 hover:text-red-700 flex items-center gap-1.5 transition"
+                >
+                  <span>Explore Panel Engineering</span>
+                  <Icons.ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Card 5: Plant Modernisation */}
+            <div className="editorial-card group flex flex-col justify-between">
+              <div>
+                <div className="relative h-44 w-full overflow-hidden bg-slate-100">
+                  <img
+                    src="/images/services/service-05-modernisation.jpg"
+                    alt="Plant Modernisation & Legacy DCS/PLC Migration"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="eager"
+                  />
+                </div>
+                <div className="p-6 space-y-2.5">
+                  <span className="text-[10px] font-mono font-bold uppercase text-red-600 tracking-wider">
+                    Service 05 • Lifecycle Upgrades
+                  </span>
+                  <h4 className="text-lg font-bold text-slate-900 group-hover:text-red-600 transition">
+                    Plant Modernisation
+                  </h4>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    Updating older control systems and equipment where the project scope allows.
+                  </p>
+                  <p className="text-[11px] text-slate-500 pt-1">
+                    Assessment, migration planning, swing-arm adapters, and cutover support.
+                  </p>
+                </div>
+              </div>
+              <div className="p-6 pt-0">
+                <Link
+                  href="/services#migration-modernization"
+                  className="text-xs font-bold text-red-600 hover:text-red-700 flex items-center gap-1.5 transition"
+                >
+                  <span>Explore Plant Modernisation</span>
+                  <Icons.ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Card 6: Testing & Commissioning */}
+            <div className="editorial-card group flex flex-col justify-between">
+              <div>
+                <div className="relative h-44 w-full overflow-hidden bg-slate-100">
+                  <img
+                    src="/images/services/service-06-commissioning.jpg"
+                    alt="On-Site Testing, Loop Checks & Commissioning"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="eager"
+                  />
+                </div>
+                <div className="p-6 space-y-2.5">
+                  <span className="text-[10px] font-mono font-bold uppercase text-red-600 tracking-wider">
+                    Service 06 • Verification & Handover
+                  </span>
+                  <h4 className="text-lg font-bold text-slate-900 group-hover:text-red-600 transition">
+                    Testing & Commissioning
+                  </h4>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    Checking that equipment and systems work correctly before handover.
+                  </p>
+                  <p className="text-[11px] text-slate-500 pt-1">
+                    FAT in workshop, cold/hot loop checks at site, SAT certification, and training.
+                  </p>
+                </div>
+              </div>
+              <div className="p-6 pt-0">
+                <Link
+                  href="/services#lifecycle-support"
+                  className="text-xs font-bold text-red-600 hover:text-red-700 flex items-center gap-1.5 transition"
+                >
+                  <span>Explore Commissioning & Support</span>
+                  <Icons.ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Leonardo da Vinci Quote Section from content.txt - ABB Editorial Layout */}
@@ -218,136 +483,11 @@ export function BusinessStorytelling() {
           </div>
         </div>
 
-        {/* The 3 Core Offerings Breakdown (from content.txt) with High-Res Industrial Photography */}
-        <div className="space-y-8">
-          <div className="space-y-2">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-red-600">
-              Core Offerings Detailed
-            </span>
-            <h3 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight">
-              Three Pillars of Industrial & Building Excellence
-            </h3>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Pillar 1: Industrial Automation */}
-            <div className="editorial-card group flex flex-col justify-between">
-              <div>
-                <div
-                  className="h-52 w-full bg-cover bg-center"
-                  style={{
-                    backgroundImage: `url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80')`,
-                  }}
-                />
-                <div className="p-6 space-y-3">
-                  <span className="text-[10px] font-mono font-bold uppercase text-red-600 tracking-wider">
-                    Pillar 01 • Heavy Process
-                  </span>
-                  <h4 className="text-lg font-bold text-slate-900 group-hover:text-red-600 transition">
-                    Industrial Automation & DCS
-                  </h4>
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    End-to-end integrated system instrumentation design from field devices to central control rooms. Solution consulting, software application development, graphics displays, database migrations, and 100% FAT/SAT testing.
-                  </p>
-                  <div className="text-[11px] text-slate-500 pt-1 space-y-1">
-                    <div>• <strong>Platforms:</strong> Honeywell Experion/TPS, Siemens S7, ABB 800xA, Rockwell SLC/Logix</div>
-                    <div>• <strong>Services:</strong> Greenfield consulting, performance baselining, automation audits</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="p-6 pt-0">
-                <Link
-                  href="/services#industrial-automation"
-                  className="text-xs font-bold text-red-600 hover:text-red-700 flex items-center gap-1.5 transition"
-                >
-                  <span>Explore Industrial Automation</span>
-                  <Icons.ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
-            </div>
-
-            {/* Pillar 2: Building Automation BMS */}
-            <div className="editorial-card group flex flex-col justify-between">
-              <div>
-                <div
-                  className="h-52 w-full bg-cover bg-center"
-                  style={{
-                    backgroundImage: `url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80')`,
-                  }}
-                />
-                <div className="p-6 space-y-3">
-                  <span className="text-[10px] font-mono font-bold uppercase text-red-600 tracking-wider">
-                    Pillar 02 • Smart Facilities
-                  </span>
-                  <h4 className="text-lg font-bold text-slate-900 group-hover:text-red-600 transition">
-                    Building Management Systems (BMS)
-                  </h4>
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    Total integrated building control and HVAC instrumentation design. Upgrading old legacy pneumatic or closed systems to open Niagara N4 platforms, saving 15%–35% in commercial facility electricity.
-                  </p>
-                  <div className="text-[11px] text-slate-500 pt-1 space-y-1">
-                    <div>• <strong>Platforms:</strong> Tridium Niagara N4, Honeywell Spyder DDC, Johnson Controls NAE/FEC</div>
-                    <div>• <strong>Upgrades:</strong> Niagara AX to N4, Johnson Controls to Niagara, pneumatic retrofits</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="p-6 pt-0">
-                <Link
-                  href="/services#building-automation"
-                  className="text-xs font-bold text-red-600 hover:text-red-700 flex items-center gap-1.5 transition"
-                >
-                  <span>Explore Building Automation</span>
-                  <Icons.ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
-            </div>
-
-            {/* Pillar 3: Turnkey E&I & Custom Panels */}
-            <div className="editorial-card group flex flex-col justify-between">
-              <div>
-                <div
-                  className="h-52 w-full bg-cover bg-center"
-                  style={{
-                    backgroundImage: `url('https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80')`,
-                  }}
-                />
-                <div className="p-6 space-y-3">
-                  <span className="text-[10px] font-mono font-bold uppercase text-red-600 tracking-wider">
-                    Pillar 03 • Fabrication & Design
-                  </span>
-                  <h4 className="text-lg font-bold text-slate-900 group-hover:text-red-600 transition">
-                    Turnkey E&I & Panel Fabrication
-                  </h4>
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    Detailed Electrical & Instrumentation (E&I) design deliverables and custom control panel manufacturing. Assembled in our Pune workshop with certified Rittal/Schneider enclosures and 100% pre-shipment simulated FAT.
-                  </p>
-                  <div className="text-[11px] text-slate-500 pt-1 space-y-1">
-                    <div>• <strong>Deliverables:</strong> Instrument Index, I/O lists, Cable Schedules, Loop Drawings, BOM</div>
-                    <div>• <strong>Testing:</strong> Power-on test, continuity checks, simulated signal injection</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="p-6 pt-0">
-                <Link
-                  href="/services#control-panels"
-                  className="text-xs font-bold text-red-600 hover:text-red-700 flex items-center gap-1.5 transition"
-                >
-                  <span>Explore Turnkey & Panels</span>
-                  <Icons.ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Company Principles Section (Direct from content.txt) */}
         <div className="bg-slate-900 text-white p-8 sm:p-12 shadow-sm space-y-8">
           <div className="max-w-2xl space-y-2">
             <span className="text-xs font-mono font-bold uppercase text-red-500 tracking-widest">
-              Guiding Ethos from content.txt
+              Guiding Ethos
             </span>
             <h3 className="text-2xl sm:text-3xl font-black tracking-tight text-white">
               The Five Enduring Principles of TecLogos
@@ -416,10 +556,10 @@ export function BusinessStorytelling() {
 
           <div className="shrink-0 p-4 bg-white border border-slate-200 text-center space-y-1 shadow-2xs">
             <div className="text-2xl font-black font-mono text-red-600">
-              100% Annual
+              Annual CSR
             </div>
             <div className="text-[11px] font-bold text-slate-800 uppercase tracking-wider">
-              Education Sponsorship Commitment
+              Primary Education Fund
             </div>
             <div className="text-[10px] text-slate-500">
               Hadapsar & Pune District Initiatives

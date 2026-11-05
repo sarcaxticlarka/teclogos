@@ -7,6 +7,7 @@ export interface ServiceDetail {
   id: string;
   title: string;
   shortDescription: string;
+  simpleExplanation: string;
   category: string;
   tagline: string;
   overview: string;
@@ -27,6 +28,8 @@ export const SERVICES_DATA: ServiceDetail[] = [
     title: "Industrial Process Automation & DCS/PLC/SCADA",
     shortDescription:
       "Integrated process control systems architecture, application programming, graphics creation, and simulation for high-availability manufacturing and continuous process plants.",
+    simpleExplanation:
+      "Industrial automation helps machines and processes work together using sensors, controllers and computer screens. TecLogos provides industrial automation engineering and integration services for facilities that need to monitor equipment, control processes and connect plant systems. The exact scope is defined for each project.",
     category: "Core Automation",
     tagline: "Autonomous, Resilient Process Control from Field I/O to Enterprise Control Workstations",
     overview:
@@ -93,6 +96,8 @@ export const SERVICES_DATA: ServiceDetail[] = [
     title: "Electrical & Instrumentation (E&I) Detail Engineering",
     shortDescription:
       "Comprehensive multi-disciplinary basic and detail engineering packages for EPC contractors, plant owners, and equipment builders.",
+    simpleExplanation:
+      "Electrical engineering helps provide and distribute power. Instrumentation uses measuring devices to tell the control system what is happening in the plant.",
     category: "Detailed Design",
     tagline: "Rigorous Engineering Blueprints that Bridge Process Chemistry to Field Cabling & Control Panels",
     overview:
@@ -158,6 +163,8 @@ export const SERVICES_DATA: ServiceDetail[] = [
     title: "Building Management Systems (BMS) & Smart OT",
     shortDescription:
       "Open-protocol building automation, smart HVAC energy optimization, environmental monitoring, and facility integration for commercial towers and critical environments.",
+    simpleExplanation:
+      "A building management system helps a building monitor and control equipment such as air conditioning, ventilation and other building services.",
     category: "Smart Infrastructure",
     tagline: "Transforming Commercial & Industrial Facilities into Self-Optimizing, Energy-Efficient Environments",
     overview:
@@ -224,6 +231,8 @@ export const SERVICES_DATA: ServiceDetail[] = [
     title: "Custom Control Panel Engineering & FAT/SAT",
     shortDescription:
       "Custom electrical, PLC, DCS, and Marshalling panel fabrication with rigorous 100% Factory Acceptance Testing simulation before dispatch.",
+    simpleExplanation:
+      "A control panel is a cabinet containing electrical and control equipment. It helps operate and protect machines and processes. Stages include design → component selection → assembly/wiring → inspection → FAT → dispatch/installation.",
     category: "Fabrication & QA",
     tagline: "Industrial-Grade Enclosures Built for Hostile Operating Environments with Zero-Defect Factory Testing",
     overview:
@@ -277,7 +286,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
       "IEC 60204-1 (Safety of Machinery - Electrical Equipment of Machines)",
     ],
     measurableBenefits: [
-      "100% pre-tested panel integrity eliminating field wiring discovery delays",
+      "Simulated pre-tested panel integrity eliminating field wiring discovery delays",
       "Optimized internal climate preventing thermal microprocessor throttling",
       "Neat, color-coded, laser-printed ferrule labeling for effortless field maintenance",
       "Full compliance with international shock, vibration, and dust ratings",
@@ -289,6 +298,8 @@ export const SERVICES_DATA: ServiceDetail[] = [
     title: "Plant Modernization & Legacy DCS/PLC Migration",
     shortDescription:
       "Risk-free, non-disruptive migration pathways from obsolete legacy automation hardware to state-of-the-art modern control platforms.",
+    simpleExplanation:
+      "Older control systems may need to be updated. Modernisation replaces or upgrades selected parts while planning how to reduce disruption to operations.",
     category: "Modernization",
     tagline: "Extending Operating Plant Lifespans Without Halting Active Production Lines",
     overview:
@@ -353,6 +364,8 @@ export const SERVICES_DATA: ServiceDetail[] = [
     title: "Lifecycle Support, Commissioning & AMC",
     shortDescription:
       "Dedicated field engineering, site acceptance testing (SAT), cold loop checks, 24/7 turnaround coverage, and Annual Maintenance Contracts (AMC).",
+    simpleExplanation:
+      "Commissioning is the process of checking that installed equipment and control systems work correctly together before they are handed over.",
     category: "Field Engineering",
     tagline: "Empowering Long-Term Plant Availability with Experienced On-Site Automation Engineers",
     overview:
